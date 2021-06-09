@@ -8,7 +8,7 @@ const Navbar = (props) => {
                 <Wrapper>ABOUT</Wrapper>
                 <Wrapper>RESUME</Wrapper>
                 <Wrapper>PROJECTS</Wrapper>
-                <Wrapper>HOBBYS</Wrapper>
+                <Wrapper>HOBBIES</Wrapper>
                 <Wrapper>CONTACT</Wrapper>
             </Content>
         </Container>
@@ -39,7 +39,7 @@ const Content = styled.div`
 `;
 
 const Wrapper = styled.a`
-    letter-spacing: .5rem;
+    letter-spacing: .4rem;
     padding-right: 15px;
     cursor: pointer;
 `;

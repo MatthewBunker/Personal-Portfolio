@@ -5,11 +5,11 @@ const LandingPage = (props) => {
         <Container>
             <Content>
                 <CTA>
-                    <Title>Matthew Bunker</Title>
+                    <Title> Matthew Bunker </Title>
                     <Characteristics>Web Developer | Student | Teacher</Characteristics>
                     <SocialMedia>
-                        <Wrapper><img src="./Images/instagram.png" /></Wrapper>
-                        <Wrapper><img src="./Images/Github.png" /></Wrapper>
+                        <Wrapper><img src="./Images/email.png" /></Wrapper>
+                        <Wrapper><img id="Github" src="./Images/Github.png" /></Wrapper>
                         <Wrapper><img src="./Images/Linkedin.png" /></Wrapper>
                     </SocialMedia>
                 </CTA>
@@ -35,21 +35,31 @@ const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column
+    flex-direction: column;
 `;
 
 const CTA = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+    text-align: center; 
 `;
 
 const Title = styled.p`
+    --bg-color: rgba(33,41,48,1);
+
+    background-color: var(--bg-color);
+    border-radius: 25px;
+    padding: 15px;
+    mix-blend-mode: multiply;
     color: white;
-    font-size: 80px;
+    //font-size: 80px;
     font-weight: 700;
     margin: 0;
+    width: calc(max-content);
+    position: relative;
+    font-size: clamp(1rem, 80px, 4rem);
+    font-family: "Source Code Pro", monospace;
 
     @media (max-width: 48rem){
         font-size: 60px;
@@ -64,6 +74,18 @@ const Characteristics = styled.p`
     @media (max-width: 48rem){
         font-size: 18.75px;
     }
+
+
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(2s) forwards;
+
+    @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+    }
 `;
 
 const SocialMedia = styled.div`
@@ -71,14 +93,31 @@ const SocialMedia = styled.div`
     justify-content: space-evenly;
     width: 100%;
     // border: 1px solid green;
+
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(3s) forwards;
+
+    @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+    }
+
+    #Github{
+        background-color: rgba(255,255,255,.5);
+        border-radius: 50%;
+        border: 1px transparent;
+    }
 `;
+
 
 const Wrapper = styled.a`
     img{
         height: 30px;
         width: 30px;  
-    }
-    
+    }    
     
     @media (max-width: 48rem){
         img{
@@ -95,8 +134,21 @@ const DownArrow = styled.img`
     position: absolute;
     top: 85%;
 
-    background-color: white;
+    background-color: rgba(255,255,255,.5);
     border-radius: 50%;
+
+    --typewriterSpeed: 6s;
+
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(4s) forwards;
+
+    @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+    }
 `;
 
 const BGVideo = styled.video`
