@@ -89,8 +89,8 @@ const Wrapper = styled.a`
             transform: scaleX(1);
             visibility: visible;
             opacity: 1 !important;
-            background-color #3f0d12;
-            background-image linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+            background-color #5cb8e6;
+            //background-image linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
         }
         transform: scale(1.15);
     }

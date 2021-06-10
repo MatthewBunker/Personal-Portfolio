@@ -1,0 +1,5 @@
+Red: #FC4445
+Light Blue: #3FEEE6
+Dark Blue: #55BCC9
+bluepurple: #97CAEF
+green: #CAFAFE
