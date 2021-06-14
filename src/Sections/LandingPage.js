@@ -16,8 +16,11 @@ const LandingPage = (props) => {
                         <Wrapper><img id="Github" src="./Images/Github.png" /></Wrapper>
                         <Wrapper><img src="./Images/Linkedin.png" /></Wrapper>
                     </SocialMedia>
-                    <Quote>"God saw all that he had made, and it was VERY GOOD."</Quote>
-                    <Quote>-Genesis 1:31</Quote>
+                    <Quote>
+                        I am a dedicated software engineer seeking a Summer or Fall 2021 internship in all aspects of the development process. I am looking to
+                        enhance my technical and professional skills in a collaborative environment, while displaying my leadership and critical thinking 
+                        skills on a unique project.
+                    </Quote>
                 </CTA>
                 <DownArrow src="./Images/chevron.png"/>
             </Content>
@@ -95,10 +98,10 @@ const Characteristics = styled.div`
 `;
 
 const Word = styled.p`
-    color: #171717;
+    color: white;
     font-size: 25px;
-    font-weight: 400;
-    background-color: rgba(255,255,255,1);
+    font-weight: 00;
+    //background-color: rgba(255,255,255,1);
     border-radius: 5px;
     padding: 5px;
     margin: 0 8px 0 0
@@ -106,9 +109,10 @@ const Word = styled.p`
 
 const SocialMedia = styled.div`
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    // border: 1px solid green;
+    justify-content: space-around;
+    width: 15%;
+    margin: 0 auto;
+    //border: 1px solid green;
 
     opacity: 0;
     transform: translateY(3rem);
@@ -145,8 +149,11 @@ const Wrapper = styled.a`
 
 const Quote = styled.p`
     color: white;
-    font-size: 25px;
-    margin-bottom: 0px;
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+    margin: 20px auto;
+    
 
     opacity: 0;
     transform: translateY(3rem);
@@ -160,7 +167,7 @@ const Quote = styled.p`
     }
 
     @media (max-width: 48rem){
-        font-size: 18.75px;
+        font-size: 15px;
     }
 `;
 
@@ -183,6 +190,10 @@ const DownArrow = styled.img`
           opacity: 1;
           transform: translateY(0);
         }
+    }
+
+    @media (max-width: 48rem){
+        display: none;
     }
 `;
 

@@ -12,7 +12,7 @@ const Hobbies = (props) => {
 };
 
 const Container = styled.div`
-    background-color: #1A1A1A;
+    background-color: white;
     min-height: 100vh;
     position: relative;
     scroll-behavior: smooth;

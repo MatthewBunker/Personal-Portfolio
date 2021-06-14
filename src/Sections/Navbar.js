@@ -4,12 +4,30 @@ const Navbar = (props) => {
     return(
         <Container>
             <Content>
-                <Wrapper href="#Home"><span>HOME</span></Wrapper>
-                <Wrapper href="#About"><span>ABOUT</span></Wrapper>
-                <Wrapper href="#Resume"><span>RESUME</span></Wrapper>
-                <Wrapper href="#Projects"><span>PROJECTS</span></Wrapper>
-                <Wrapper href="#Hobbies"><span>HOBBIES</span></Wrapper>
-                <Wrapper href="#Contact"><span>CONTACT</span></Wrapper>
+                <Wrapper href="#Home">
+                    <img src="/Images/home-icon.svg" alt="HOME"/>
+                    <span>HOME</span>
+                </Wrapper>
+                <Wrapper href="#About">
+                    <img src="/Images/info.png" alt="ABOUT" style={{backgroundColor: 'white', borderRadius: '50%'}} />
+                    <span>ABOUT</span>
+                </Wrapper>
+                <Wrapper href="#Resume">
+                    <img src="/Images/online-resume.png" alt="RESUME" style={{backgroundColor: 'white', height: '20px', width: '17px'}} />
+                    <span>RESUME</span>
+                </Wrapper>
+                <Wrapper href="#Projects">
+                    <img src="/Images/project.png" alt="PROJECTS" style={{width: '17px'}}/>
+                    <span>PROJECTS</span>
+                </Wrapper>
+                <Wrapper href="#Hobbies">
+                    {/* <img src="/Images/sports.png" alt="HOBBIES" style={{backgroundColor: 'white', borderRadius: '50%'}}/> */}
+                    <span>HOBBIES</span>
+                </Wrapper>
+                <Wrapper href="#Contact">
+                    {/* <img src="/Images/call.png" alt="CONTACT" style={{backgroundColor: 'white', borderRadius: '50%'}} /> */}
+                    <span>CONTACT</span>
+                </Wrapper>
             </Content>
         </Container>
     );
@@ -42,8 +60,17 @@ const Content = styled.div`
 const Wrapper = styled.a`
     letter-spacing: .3rem;
     cursor: pointer;
-    padding-right: 15px;
+    padding-right: px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+
+    img{
+        width: 20px;
+        heigh: 20px;
+        margin-right: 3px;
+    }
 
     span{
         color: rgb(249, 249, 249);
@@ -51,6 +78,7 @@ const Wrapper = styled.a`
         line-height: 1.08;
         white-space: nowrap;
         position: relative;
+        
         &:before {
             background-color: rgb(249, 249, 249);
             border-radius: 0px 0px 4px 4px;
@@ -92,7 +120,11 @@ const Wrapper = styled.a`
             background-color #5cb8e6;
             //background-image linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
         }
+        span:after{
+            background-color white;
+        }
         transform: scale(1.15);
+        transition: 1s;
     }
 `;
 
