@@ -110,7 +110,7 @@ const Word = styled.p`
 const SocialMedia = styled.div`
     display: flex;
     justify-content: space-around;
-    width: 15%;
+    width: 20%;
     margin: 0 auto;
     //border: 1px solid green;
 
@@ -129,6 +129,10 @@ const SocialMedia = styled.div`
         background-color: rgba(255,255,255,1);
         border-radius: 50%;
         border: 1px transparent;
+    }
+
+    a{
+        padding-right: 15px;
     }
 `;
 
@@ -192,9 +196,9 @@ const DownArrow = styled.img`
         }
     }
 
-    @media (max-width: 48rem){
-        display: none;
-    }
+    // @media (max-width: 48rem){
+    //     display: none;
+    // }
 `;
 
 const BGVideo = styled.video`

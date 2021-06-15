@@ -1,32 +1,47 @@
 import styled from 'styled-components';
+import {Link} from 'react-scroll';
 
 const Navbar = (props) => {
+    
+
     return(
         <Container>
             <Content>
                 <Wrapper href="#Home">
-                    <img src="/Images/home-icon.svg" alt="HOME"/>
-                    <span>HOME</span>
+                    <Link activeClass="active" to="Home" spy={true} smooth={true} offset={0} duration={1000}>
+                        <img src="/Images/home-icon.svg" alt="HOME"/>
+                        <span>HOME</span>
+                    </Link>
                 </Wrapper>
                 <Wrapper href="#About">
-                    <img src="/Images/info.png" alt="ABOUT" style={{backgroundColor: 'white', borderRadius: '50%'}} />
-                    <span>ABOUT</span>
+                    <Link activeClass="active" to="About" spy={true} smooth={true} offset={0} duration={1000}>
+                        <img src="/Images/info.png" alt="ABOUT" style={{backgroundColor: 'white', borderRadius: '50%'}} />
+                        <span>ABOUT</span>
+                    </Link>
                 </Wrapper>
                 <Wrapper href="#Resume">
-                    <img src="/Images/online-resume.png" alt="RESUME" style={{backgroundColor: 'white', height: '20px', width: '17px'}} />
-                    <span>RESUME</span>
+                    <Link activeClass="active" to="Resume" spy={true} smooth={true} offset={0} duration={1000}>
+                        <img src="/Images/online-resume.png" alt="RESUME" style={{backgroundColor: 'white',width: '20px', alignItems: 'center' }} />
+                        <span>RESUME</span>
+                    </Link>
                 </Wrapper>
                 <Wrapper href="#Projects">
-                    <img src="/Images/project.png" alt="PROJECTS" style={{width: '17px'}}/>
-                    <span>PROJECTS</span>
+                    <Link activeClass="active" to="Projects" spy={true} smooth={true} offset={0} duration={1000}>
+                        <img src="/Images/project.png" alt="PROJECTS" style={{}}/>
+                        <span>PROJECTS</span>
+                    </Link>
                 </Wrapper>
                 <Wrapper href="#Hobbies">
-                    {/* <img src="/Images/sports.png" alt="HOBBIES" style={{backgroundColor: 'white', borderRadius: '50%'}}/> */}
-                    <span>HOBBIES</span>
+                    <Link activeClass="active" to="Hobbies" spy={true} smooth={true} offset={0} duration={1000}>
+                        {/* <img src="/Images/sports.png" alt="HOBBIES" style={{backgroundColor: 'white', borderRadius: '50%'}}/> */}
+                        <span>HOBBIES</span>
+                    </Link>
                 </Wrapper>
                 <Wrapper href="#Contact">
-                    {/* <img src="/Images/call.png" alt="CONTACT" style={{backgroundColor: 'white', borderRadius: '50%'}} /> */}
-                    <span>CONTACT</span>
+                    <Link activeClass="active" to="Contact" spy={true} smooth={true} offset={0} duration={1000}>
+                        {/* <img src="/Images/call.png" alt="CONTACT" style={{backgroundColor: 'white', borderRadius: '50%'}} /> */}
+                        <span>CONTACT</span>
+                    </Link>
                 </Wrapper>
             </Content>
         </Container>
@@ -68,7 +83,7 @@ const Wrapper = styled.a`
 
     img{
         width: 20px;
-        heigh: 20px;
+        height: 20px;
         margin-right: 3px;
     }
 

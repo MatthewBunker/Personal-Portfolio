@@ -3,6 +3,8 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 
 const Projects = (props) => {
+    
+
     return(
         <Container id="Projects">
             <Content>
