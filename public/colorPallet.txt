@@ -1,5 +1,7 @@
-Red: #FC4445
-Light Blue: #3FEEE6
-Dark Blue: #55BCC9
-bluepurple: #97CAEF
-green: #CAFAFE
+#CF352E red
+#5CB8E6 blue
+
+font-family: "Courier New", Arial;
+
+background-color: #1A1A1A;
+background-color: white;

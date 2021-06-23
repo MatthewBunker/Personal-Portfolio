@@ -1,6 +1,6 @@
 import './App.css';
 
-import Navbar from './Sections/Navbar';
+import Navbars from './Sections/Navbars';
 import LandingPage from './Sections/LandingPage';
 import About from './Sections/About';
 import Resume from './Sections/Resume';
@@ -11,7 +11,7 @@ import Contact from './Sections/Contact';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbars />
       <LandingPage />
       <About />
       <Resume />

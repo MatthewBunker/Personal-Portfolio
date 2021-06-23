@@ -3,11 +3,10 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 
 const Projects = (props) => {
-    
 
     return(
         <Container id="Projects">
-            <Content>
+            <Content id="projectContent">
                 <Title>Highlighted Projects</Title>
                 <SubTitle>Check Out My Collection on <a href="https://github.com/MatthewBunker" target="_blank">Github</a>.</SubTitle>
                 <VerticalTimeline>
@@ -17,7 +16,7 @@ const Projects = (props) => {
                         contentStyle={{ background: '#A6AAAB', color: '#F1F7F9', display: 'flex', flexDirection: 'column', textAlign: 'center'}}
                         contentArrowStyle={{ borderRight: '7px solid  #5cb8e6' }}
                         date="June 2021"
-                        iconStyle={{ background: '#5cb8e6', color: '#fff'}}
+                        iconStyle={{ background: '#CF352E', color: '#fff'}}
                     >
                         <h3 
                             className="vertical-timeline-element-title"
@@ -55,7 +54,7 @@ const Projects = (props) => {
                         contentStyle={{ background: '#A6AAAB', color: '#F1F7F9', display: 'flex', flexDirection: 'column', textAlign: 'center'}}
                         contentArrowStyle={{ borderRight: '7px solid  #5cb8e6' }}
                         date="May 2021"
-                        iconStyle={{ background: '#5cb8e6', color: '#fff'}}
+                        iconStyle={{ background: '#CF352E', color: '#fff'}}
                     >
                         <h3 
                             className="vertical-timeline-element-title"
@@ -94,7 +93,7 @@ const Projects = (props) => {
                         contentStyle={{ background: '#A6AAAB', color: '#F1F7F9', display: 'flex', flexDirection: 'column', textAlign: 'center'}}
                         contentArrowStyle={{ borderRight: '7px solid  #5cb8e6' }}
                         date="January 2021 - May 2021"
-                        iconStyle={{ background: '#5cb8e6', color: '#fff'}}
+                        iconStyle={{ background: '#CF352E', color: '#fff'}}
                     >
                         <h3 
                             className="vertical-timeline-element-title"
@@ -135,7 +134,7 @@ const Projects = (props) => {
                         contentStyle={{ background: '#A6AAAB', color: '#F1F7F9', display: 'flex', flexDirection: 'column', textAlign: 'center'}}
                         contentArrowStyle={{ borderRight: '7px solid  #5cb8e6' }}
                         date="October 2020 - December 2020"
-                        iconStyle={{ background: '#5cb8e6', color: '#fff'}}
+                        iconStyle={{ background: '#CF352E', color: '#fff'}}
                     >
                         <h3 
                             className="vertical-timeline-element-title"
@@ -173,7 +172,7 @@ const Projects = (props) => {
                         contentStyle={{ background: '#A6AAAB', color: '#F1F7F9', display: 'flex', flexDirection: 'column', textAlign: 'center'}}
                         contentArrowStyle={{ borderRight: '7px solid  #5cb8e6' }}
                         date="July 2020"
-                        iconStyle={{ background: '#5cb8e6', color: '#fff'}}
+                        iconStyle={{ background: '#CF352E', color: '#fff'}}
                     >
                         <h3 
                             className="vertical-timeline-element-title"
@@ -212,7 +211,7 @@ const Projects = (props) => {
                         contentStyle={{ background: '#A6AAAB', color: '#F1F7F9', display: 'flex', flexDirection: 'column', textAlign: 'center'}}
                         contentArrowStyle={{ borderRight: '7px solid  #5cb8e6' }}
                         date="April 2020"
-                        iconStyle={{ background: '#5cb8e6', color: '#fff'}}
+                        iconStyle={{ background: '#CF352E', color: '#fff'}}
                     >
                         <h3 
                             className="vertical-timeline-element-title"
@@ -249,10 +248,7 @@ const Projects = (props) => {
 };
 
 const Container = styled.div`
-    background-color: #2E2D2D;
-    //height: 540vh;
-    //position: relative;
-    scroll-behavior: smooth;
+background-color: #1A1A1A;
     padding: 0 0 90px 0;
 `;
 
@@ -262,22 +258,33 @@ const Content = styled.div`
     //border: 1px solid red;
     width: 100%;
     text-align: center;
+    font-family: "Courier New", Arial;
 `;
 
 const Title = styled.p`
-    color: #5cb8e6;
-    font-size: 30px;
+    color: #CF352E;
+    font-size: 24px;
     font-weight: 700;
+
+    @media(max-width: 48rem){
+        font-size: 24px;
+    }
 `;
 
 const SubTitle = styled.p`
     color: white;
-    font-size: 30px;
+    font-size: 40px;
     margin: 0 0 15px 0;
 
     a{
         color: #5cb8e6;
         text-decoration: none;
+    }
+
+    @media(max-width: 48rem){
+        text-align: left;
+        font-size: 48px;
+        margin-left: 17px;
     }
 `;
 
@@ -288,8 +295,8 @@ const LanguageImg = styled.img`
     padding-right: 5px;
 
     &:hover{
-        transform: translateY(-5px);
-        transition-duration: 1s;
+        transform: translateY(-8px);
+        transition-duration: 750ms;
     }
 `;
 
@@ -312,10 +319,11 @@ const Button = styled.a`
     &:hover{
         background-color: #2E2D2D;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        //color: #5cb8e6;
+        color: white;
         transition-duration: 1s;
         //border: 3px solid rgba(255,255,255,.7);
         transform: scale(1.05);
+        text-decoration: none;
     }
 `;
 
