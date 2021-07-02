@@ -60,7 +60,7 @@ const LandingPage = (props) => {
                 </CTA>
                 <DownArrow src="./Images/chevron.png"/>
             </Content>
-            <BGVideo id="video" src="./Videos/lake.mov" type="video/mp4" autoPlay muted loop/>
+            <BGVideo id="video" src="./Videos/lake.mov" type="video/mp4" autoPlay muted loop playsInline="true" disablePictureInPicture="true"/>
         </Container>
     );
 };

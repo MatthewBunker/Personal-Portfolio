@@ -104,8 +104,8 @@ const Resume = (props) => {
                                     <img src="./Images/rubyOnRails.png" id="rails"/>
                                     <img src="./Images/physics.png" id="react"/>
                                     <img src="./Images/github.png" id="github"/>
-                                    <img src="./Images/styledComponents.png" id="styled"/>
-                                    <img src="./Images/firebase.png" id="firebase"/>
+                                    <img src="./Images/styledComponents.png" id="styled" style={{backgroundColor: 'grey', borderRadius: '50%'}}/>
+                                    <img src="./Images/firebase.png" id="firebase" style={{backgroundColor: 'grey', padding: '5px'}}/>
                                     <img src="./Images/bootstrap-fill.svg" id="bootstrap" />
                                     <img src="./Images/c++.png" id="c"/>
                                 </LanguagesImg>
@@ -116,7 +116,7 @@ const Resume = (props) => {
                                 <LanguagesImg>
                                     <img src="./Images/heroku.png" id="heroku"/>
                                     <img src="./Images/java.png" id="java"/>
-                                    <img src="./Images/postgresql-vertical.svg" id="postgresql"/>
+                                    <img src="./Images/postgresql-vertical.svg" id="postgresql" style={{backgroundColor: 'grey'}}/>
                                 </LanguagesImg>
                             </LanguagesLevel>
                         </LanguagesRow>
@@ -129,24 +129,26 @@ const Resume = (props) => {
 
 const Container = styled.div`
     background-color: white;
-    min-height: 100vh; 
+    min-height: 100vh;
+    // border: 1px solid red; 
 `;
 
 const Content = styled.div`
     position: relative;
     top: 75px;
-    //border: 1px solid red;
+    // border: 1px solid blue;
     width: 100%;
-    height: 100%;
     font-family: "Courier New", Arial;
 `;
 
 const CTA = styled.div`
-    margin: 0px 5px 150px 82px;
-    height: 100%;
+    margin-left: 82px;
+    margin-right: 10px;
+    // height: 100%;
+    // border: 1px solid green;
 
     @media (max-width: 48rem){
-        margin: 0px 5px 150px 17px !important;
+        margin: 0px 0px 150px 17px !important;
     }
 `;
 
@@ -255,7 +257,11 @@ const InfoText = styled.p`
 `;
 
 const LanguagesDiv = styled.div`
-    margin: 0 0 30px 0;
+    margin: 0 0 120px 0;
+
+    @media (max-width: 48rem){
+        margin: 0;
+    }
 `;
 
 const LanguagesTitle = styled.p`
@@ -290,6 +296,8 @@ const LevelTitle = styled.p`
 `;
 
 const LanguagesImg = styled.div`
+    margin-bottom: 75px;
+
     img{
         height: 40px;
         width: 40px;

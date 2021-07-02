@@ -233,7 +233,7 @@ const Projects = (props) => {
                         >
                             An artificial intelligence blackjack game that offers a simple interface. The game includes card images, sounds, a table to tally the player's record, and a money component.
                         </p>
-                        <ElementImg src="./Images/FinalBJInterface.PNG" />
+                        <ElementImg src="./Images/FinalBJInterface.png" />
                         <div
                             style={{margin: '25px 0 15px 0'}}
                         >
