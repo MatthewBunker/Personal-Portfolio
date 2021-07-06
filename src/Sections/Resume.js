@@ -1,11 +1,16 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 const Resume = (props) => {
     return(
         <Container id="Resume">
+            <Diamond1></Diamond1>
+            <Diamond2></Diamond2>
+            <Diamond3></Diamond3>
+            <Diamond4></Diamond4>
+            <Diamond5></Diamond5>
             <Content>
                 <Title>Resume</Title>
-                <SubTitle>I'm Determined to be Successful.</SubTitle>
+                <SubTitle>My professional life in a snapshot.</SubTitle>
                 <CTA>
                     <EducationDiv>
                         <EducationTitle>Education</EducationTitle>
@@ -43,8 +48,8 @@ const Resume = (props) => {
 
                             <InfoDiv>
                                 <InfoTitle>Honors:</InfoTitle>
-                                <InfoSubTitle>Lauren ‘02 and Christopher Zugaro ‘02 Scholarship</InfoSubTitle>
-                                <InfoSubTitle>Distinguished Student Award</InfoSubTitle>
+                                <InfoSubTitle><li>Lauren ‘02 and Christopher Zugaro ‘02 Scholarship</li></InfoSubTitle>
+                                <InfoSubTitle><li>Distinguished Student Award</li></InfoSubTitle>
                             </InfoDiv>
                         </EducationRow>
                     </EducationDiv>
@@ -59,7 +64,7 @@ const Resume = (props) => {
                                     Instructed engineering students in introductory software 
                                     engineering topics through python. As well as installing
                                     important teaching skills such as analyzing code quickly 
-                                    and adapting positive, but applicable feedback in a straightforward manner.
+                                    and adapting positive, but applicable feedback in a straight forward manner.
                                 </InfoText>
                             </InfoDiv>
 
@@ -139,6 +144,178 @@ const Content = styled.div`
     // border: 1px solid blue;
     width: 100%;
     font-family: "Courier New", Arial;
+    z-index: 4;
+`;
+
+const BaseDiamond = css`
+    height: 75px;
+    width: 75px;
+    background-color: #CF352E;
+    transform: rotate(45deg);
+    opacity: .2;
+    position: fixed;
+    z-index: 3;
+`;
+
+const Diamond1 = styled.div`
+    ${BaseDiamond}
+    animation: diamondgrow1 20s linear 0s infinite normal;
+
+    @keyframes diamondgrow1{
+        0%{
+            top: 20%;
+            left: 70%;
+            transform: rotate(45deg);
+        }
+        25%{
+            top: 50%;
+            left: 50%;
+        }
+        50%{
+            top: 20%;
+            left: 30%;
+        }
+        75%{
+            top: 10%;
+            left: 50%;
+        }
+        100%{
+            top: 20%;
+            left: 70%;
+            transform: rotate(315deg);
+        }
+    }
+`;
+
+const Diamond2 = styled.div`
+    ${BaseDiamond}
+    background-color: #5CB8E6;
+
+    animation: diamondgrow2 20s linear 0s infinite normal;
+
+    @keyframes diamondgrow2{
+        0%{
+            top: 40%;
+            left: 20%;
+            transform: rotate(315deg);
+        }
+        25%{
+            top: 40%;
+            left: 55%;
+
+        }
+        50%{
+            top: 70%;
+            left: 35%;
+        }
+        75%{
+            top: 60%;
+            left:10%;
+        }
+        100%{
+            top: 40%;
+            left: 20%;
+            transform: rotate(45deg);
+        }
+    }
+`;
+
+const Diamond3 = styled.div`
+    ${BaseDiamond}
+    background-color: #5CB8E6;
+
+    animation: diamondgrow3 20s linear 0s infinite normal;
+
+    @keyframes diamondgrow3{
+        0%{
+            top: 70%;
+            left: 70%;
+            transform: rotate(45deg);
+        }
+        25%{
+            top: 40%;
+            left: 90%;
+        }
+        50%{
+            top: 90%;
+            left: 90%;
+        }
+        75%{
+            top: 90%;
+            left: 45%;
+        }
+        100%{
+            top: 70%;
+            left: 70%;
+            transform: rotate(315deg);
+        }
+    }
+`;
+
+const Diamond4 = styled.div`
+    ${BaseDiamond}
+    overflow: hidden;
+
+    animation: diamondgrow4 20s linear 0s infinite normal;
+
+    @keyframes diamondgrow4{
+        0%{
+            top: 80%;
+            left: 10%;
+            transform: rotate(315deg);
+        }
+        25%{
+            top: 20%;
+            left: 5%;
+
+        }
+        50%{
+            top: 50%;
+            left: 30%;
+        }
+        75%{
+            top: 85%;
+            left: 35%;
+        }
+        100%{
+            top: 80%;
+            left: 10%;
+            transform: rotate(45deg);
+        }
+    }
+`;
+
+const Diamond5 = styled.div`
+    ${BaseDiamond}
+
+    background-color: #5CB8E6;
+
+    animation: diamondgrow5 20s linear 0s infinite normal;
+
+    @keyframes diamondgrow5{
+        0%{
+            top: 50%;
+            left: 50%;
+            transform: rotate(45deg);
+        }
+        25%{
+            top: 15%;
+            left: 75%;
+        }
+        50%{
+            top: 25%;
+            left: 85%;
+        }
+        75%{
+            top: 20%;
+            left: 65%;
+        }
+        100%{
+            top: 50%;
+            left: 50%;
+            transform: rotate(315deg);
+        }
+    }
 `;
 
 const CTA = styled.div`

@@ -48,9 +48,9 @@ const LandingPage = (props) => {
                         <Word>Teacher</Word>
                     </Characteristics>
                     <SocialMedia>
-                        <Wrapper><img src="./Images/email.png" /></Wrapper>
-                        <Wrapper href="https://github.com/MatthewBunker" target="_blank"><img id="Github" src="./Images/Github.png" /></Wrapper>
-                        <Wrapper><img src="./Images/Linkedin.png" /></Wrapper>
+                        <Wrapper href= "mailto: matthewscottbunker@gmail.com"><img src="./Images/email.png" /></Wrapper>
+                        <Wrapper href="https://github.com/MatthewBunker" target="_blank"> <img id="Github" src="./Images/github.png" /></Wrapper>
+                        <Wrapper href="https://www.linkedin.com/in/matthew-bunker-744a14186/" target="_blank"><img src="./Images/Linkedin.png" /></Wrapper>
                     </SocialMedia>
                     <Quote>
                         I am a dedicated software engineer seeking a Summer or Fall 2021 internship in all aspects of the development process. I am looking to
@@ -69,6 +69,7 @@ const Container = styled.div`
     position: relative;
     height: 100vh;
     width: 100%;
+    z-index: 4;
 `;
 
 const Content = styled.div`
@@ -90,6 +91,10 @@ const CTA = styled.div`
     text-align: center; 
     font-family: "Courier New", Arial;
     width: 100%;
+    
+    @media (max-width: 48rem){
+        width: 90%;
+    }
 `;
 
 const Title = styled.p`
@@ -126,13 +131,19 @@ const Characteristics = styled.div`
 `;
 
 const Word = styled.p`
-    color: white;
+    color: black;
+    // background-color: white;
+    border-radius: 4px;
+    // box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;    
     font-size: 25px;
-    font-weight: 00;
+    font-weight: 700;
     //background-color: rgba(255,255,255,1);
-    border-radius: 5px;
     padding: 5px;
-    margin: 0px;
+    margin: 0px 15px 0px 0px;
+
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
 
     @media (max-width: 48rem){
         font-size: 18px;
@@ -171,9 +182,10 @@ const SocialMedia = styled.div`
 
 const Wrapper = styled.a`
     img{
-        height: 30px;
-        width: 30px;  
+        height: 40px;
+        width: 40px;  
     }
+    z-index: 3;
     
     @media (max-width: 48rem){
         img{
@@ -184,12 +196,21 @@ const Wrapper = styled.a`
 `;
 
 const Quote = styled.p`
-    color: white;
+    color: black;
+    // background-color: white;
+    border-radius: 4px;
+    font-weight: 700;
+    // box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     font-size: 20px;
     // width: 50%;
     text-align: center;
     margin: 20px auto;
     max-width: 600px;
+
+    
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
     
 
     opacity: 0;
@@ -243,8 +264,7 @@ const DownArrow = styled.img`
             transform: scale(1);
         }
     }
-    animation: pulse 2s infinite;
-    animation-delay: 5s;
+    animation: pulse 2s 5s infinite;
 `;
 
 const BGVideo = styled.video`

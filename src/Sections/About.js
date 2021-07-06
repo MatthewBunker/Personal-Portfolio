@@ -113,6 +113,8 @@ const Container = styled.div`
     background-color: #1A1A1A;
     min-height: 100vh;
     // border: 1px solid green;
+    position: relative;
+    z-index: 4;
 `;
 
 const Content = styled.div`
@@ -130,6 +132,10 @@ const CTA = styled.div`
     text-align: center;
     max-width: 791px;
     font-family: "Courier New", Arial;
+
+    @media (max-width: 48rem){
+        width: 90%;
+    }
 `;
 
 const Title = styled.p`

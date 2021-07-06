@@ -31,25 +31,25 @@ const Navbars = (props) => {
              <Content>
                 <Wrapper href="#Home">
                     <Link activeClass="active" to="Home" spy={true} smooth={true} offset={0} duration={1000}>
-                        <img src="/Images/home-icon.svg" alt="HOME"/>
+                        {/* <img src="/Images/home-icon.svg" alt="HOME"/> */}
                         <span>HOME</span>
                     </Link>
                 </Wrapper>
                 <Wrapper href="#About">
                     <Link activeClass="active" to="About" spy={true} smooth={true} offset={0} duration={1000}>
-                        <img src="/Images/info.png" alt="ABOUT" style={{backgroundColor: 'white', borderRadius: '50%', width: '15px', height: '15px'}} />
+                        {/* <img src="/Images/info.png" alt="ABOUT" style={{backgroundColor: 'white', borderRadius: '50%', width: '15px', height: '15px'}} /> */}
                         <span>ABOUT</span>
                     </Link>
                 </Wrapper>
                 <Wrapper href="#Resume">
                     <Link activeClass="active" to="Resume" spy={true} smooth={true} offset={0} duration={1000}>
-                        <img src="/Images/online-resume.png" alt="RESUME" style={{backgroundColor: 'white',width: '12px', height: '15px', alignItems: 'center' }} />
+                        {/* <img src="/Images/online-resume.png" alt="RESUME" style={{backgroundColor: 'white',width: '12px', height: '15px', alignItems: 'center' }} /> */}
                         <span>RESUME</span>
                     </Link>
                 </Wrapper>
                 <Wrapper href="#Projects">
                     <Link activeClass="active" to="Projects" spy={true} smooth={true} offset={0} duration={1000}>
-                        <img src="/Images/project.png" alt="PROJECTS" style={{width: '15px', height: '15px'}}/>
+                        {/* <img src="/Images/project.png" alt="PROJECTS" style={{width: '15px', height: '15px'}}/> */}
                         <span>PROJECTS</span>
                     </Link>
                 </Wrapper>
@@ -125,7 +125,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
-  z-index: 1;
+  z-index: 999;
   position: fixed;
   align-items: center;
 `;

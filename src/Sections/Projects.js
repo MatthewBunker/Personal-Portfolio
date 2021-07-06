@@ -248,8 +248,10 @@ const Projects = (props) => {
 };
 
 const Container = styled.div`
-background-color: #1A1A1A;
+    background-color: #1A1A1A;
     padding: 0 0 90px 0;
+    position: relative;
+    z-index: 4;
 `;
 
 const Content = styled.div`
